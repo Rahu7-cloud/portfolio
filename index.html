@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Scattered Writings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Fira+Sans+Extra+Condensed&family=Oswald:wght@600&family=Josefin+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/icons8-grand-canyon-16.png"
+    />
+  </head>
+  <body>
+    <div class="main-box">
+      <nav>
+        <h2 class="name">Rahul<span id="surname"> Patnaik</span></h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </nav>
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Log In
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div class="social-icons">
+          <div class="icons-list">
+            <a id="fb-logo" href="#"
+              ><i class="fa fa-facebook" aria-hidden="true"></i
+            ></a>
+            <a id="insta-logo" href="#"
+              ><i class="fa fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a id="linkedin-logo" href="#"
+              ><i class="fa fa-linkedin" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <form id="login" action="" class="input-user">
+          <div>
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Enter your name"
+            />
+            <img
+              class="logo"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAcxJREFUSEvlle0xBEEQhp+LgAwQASJABmRABIgAESACIZABIkAEhEAE1KNmrub2ZmZ7+eGHrrrarduefvt9pz9m/JHN/giXnwLvApsp6WfgcSqBqcD7wA2wOgB6B46Au2gCU4CvgOORwKeAfqMWBVba+xRNWQ3+AMhUFU6AnfR9L33rgkeBvUfv9AXYakR8A9YAfbfHKEeBP1OgnpTnwFnyG4076gCUMvdkjPp95xYBXgdeE5ODTuUeporXdQNQ+qZFgD1sEa0A16mQagFz1X9U2m3JPwpctlJN7lLmXnLzBKLADgzbJ08r363e3E650ntVv8A6Cuwh79rJlMGH8tnf3nP3bvOhKcD5jMPCoZFZytyEQhPrN8BjsyH0PcpYdkrsszW5ZO7Pe/b5q5FpUbmNlHaKKb3byuKrWo9xbQXaoy02KmGvZ+uuyhawQZ6KIPamxTNWsVa+xVeuTxfGUrIt4LyNZChz+3aKeeY2HahuqxpwuWXCi72Slcwv0/8XgHHnVgOWnUs9PIU6UmTlHC6O1S5w3r1LWU7ROvk2d/SQcVlUvRUYzaG864UiGwJPWuYB9Ga8IbADo5zBzQEQANWlGS86MoM4cbf/B/wF5GpcH3yxaxIAAAAASUVORK5CYII="
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+            />
+            <img
+              class="logo"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAASZJREFUSEvtlu0NAUEQhp+rgBKoAB1QATqgAlSCCugAFVCCDtABFZBX9pJzH27WXXKJ3P65bG52ntl3Zmc3oKIRVMTlV/AI6Ligz8DBdwO+4AmwBJox0B1YAFtrAD7gFTDLcbwG5ha4FSxpd87hwzk/uXkfUFANNx8D+zy4Faw8KqeCdoFrzHELkI3g+vbKAMvpxTn6JmU0Fe2U4D5isexYUh7dqgEQShzfVDQd3+ze68oEWwOswYk6VPUOARWXGoeGGkS8osOFaXbqaKryxMjKsUCbvCNh/D9N62hZYLXAsCEY/WeaSSEdL9Nxehal5XGydlyDiyqfULaWOpS0Lq7/L64yW+bNXTSmllnZJaHodC3qOVNk6LXpdS0WgZnWWt5cJke+Ri9avj8fYU1l8gAAAABJRU5ErkJggg=="
+            />
+          </div>
+          <div class="bottom">
+            <input type="checkbox" class="check-box" /><span
+              >Remember Password</span
+            >
+            <button type="button" class="submit-btn">Ready!</button>
+          </div>
+        </form>
+        <form id="register" action="" class="input-user">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Enter your name"
+          />
+          <input type="email" class="input-field" placeholder="Email Id" />
+          <input type="password" class="input-field" placeholder="Password" />
+          <div class="bottom">
+            <input type="checkbox" class="check-box" /><span
+              >I agree to terms and conditions</span
+            >
+            <button type="button" class="submit-btn">Ready!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+      VanillaTilt.init(
+        document.querySelectorAll(".social-icons .icons-list a"),
+        {
+          max: 25,
+          speed: 400,
+          glare: true,
+          "max-glare": 1,
+        }
+      );
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "130px";
+      }
+
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "400px";
+        z.style.left = "0px";
+      }
+    </script>
+  </body>
+</html>
