@@ -41,19 +41,26 @@ nav ul li a:hover {
 
 .name-loading {
   position: relative;
-  top: 190px;
+  top: 290px;
   left: 190px;
+  max-width: 35%;
 }
 
 .name-loading h1 {
-  font-size: 105px;
-  font-family: "Caveat", cursive;
+  font-size: 65px;
+  font-family: "Finger Paint", cursive;
   font-weight: 600;
   color: #93472a;
+  max-width: 100%;
+}
+
+.name-loading p {
+  font-family: "Finger Paint", cursive;
+  color: #491e0e;
 }
 
 .input-name {
-  font-size: 105px;
+  font-size: 65px;
   color: #491e0e;
 }
 
