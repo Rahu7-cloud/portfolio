@@ -48,7 +48,13 @@
           Hey there! Since I caught your attention, hope the visit is worth it!
         </p>
       </div>
-      <!--<div class="form-box">
+      <p class="footprintlogo">
+        <img src="images/footprint.png" alt="click on footprint" />
+      </p>
+      <div class="form-box">
+        <span class="icon-close">
+          <ion-icon name="close-outline"></ion-icon>
+        </span>
         <div class="button-box">
           <div id="btn"></div>
           <button type="button" class="toggle-btn" onclick="login()">
@@ -95,7 +101,7 @@
             />
           </div>
           <div class="bottom">
-            <input type="checkbox" class="check-box" /><span
+            <input type="checkbox" class="check-box" /><span class="spantnc"
               >Remember Password</span
             >
             <button type="button" class="submit-btn">Ready!</button>
@@ -110,13 +116,13 @@
           <input type="email" class="input-field" placeholder="Email Id" />
           <input type="password" class="input-field" placeholder="Password" />
           <div class="bottom">
-            <input type="checkbox" class="check-box" /><span
+            <input type="checkbox" class="check-box" /><span class="spantnc"
               >I agree to terms and conditions</span
             >
             <button type="button" class="submit-btn">Ready!</button>
           </div>
         </form>
-      </div>-->
+      </div>
     </div>
     <div>
       <h2>testing</h2>
@@ -136,12 +142,19 @@
     </div>
     <script src="vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script>
       var typed = new Typed(".input-name", {
         strings: [
           "Rahul!",
           "a Developer!",
-          "a Programmer!",
           "a Bibliophile!",
           "tech savvy!",
           "a Potterhead!",
@@ -178,6 +191,10 @@
         y.style.left = "400px";
         z.style.left = "0px";
       }
+      const btnPopup = document.querySelector(".btnLogin-popup");
+      btnPopup.addEventListener("click", () => {
+        form - box.classList.add("active-popup");
+      });
     </script>
   </body>
 </html>
