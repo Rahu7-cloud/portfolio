@@ -43,12 +43,12 @@
         </ul>
       </nav>
       <div class="name-loading">
-        <h1>I'm <span class="input-name">Rahul</span></h1>
+        <h1>I'm <span class="input-name"></span></h1>
         <p>
           Hey there! Since I caught your attention, hope the visit is worth it!
         </p>
       </div>
-      <div class="form-box">
+      <!--<div class="form-box">
         <div class="button-box">
           <div id="btn"></div>
           <button type="button" class="toggle-btn" onclick="login()">
@@ -116,7 +116,7 @@
             <button type="button" class="submit-btn">Ready!</button>
           </div>
         </form>
-      </div>
+      </div>-->
     </div>
     <div>
       <h2>testing</h2>
@@ -138,10 +138,19 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".input-name", {
-        strings: ["a Developer", "a Programmer", "a Bibliophile", "tech savvy"],
+        strings: [
+          "Rahul!",
+          "a Developer!",
+          "a Programmer!",
+          "a Bibliophile!",
+          "tech savvy!",
+          "a Potterhead!",
+          "a Problem-solver!",
+        ],
         typeSpeed: 100,
         backSpeed: 100,
         loop: true,
+        showCursor: false,
       });
     </script>
     <script>
