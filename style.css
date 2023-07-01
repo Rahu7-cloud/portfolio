@@ -115,6 +115,47 @@ nav {
   letter-spacing: 2px;
   line-height: 40px;
 }
+#layers_cloud1 {
+  z-index: 2;
+  position: absolute;
+  right: 65%;
+  bottom: 45%;
+  transform: scale(0.5);
+  animation: moveCloud1 100s linear infinite;
+}
+
+@keyframes moveCloud1 {
+  0% {
+    right: 65%;
+  }
+  50% {
+    right: -20%;
+  }
+  100% {
+    right: 65%;
+  }
+}
+
+#layers_cloud2 {
+  z-index: 2;
+  position: absolute;
+  left: 65%;
+  bottom: 50%;
+  transform: scale(0.7);
+  animation: moveCloud2 100s linear infinite;
+}
+
+@keyframes moveCloud2 {
+  0% {
+    left: 65%;
+  }
+  50% {
+    left: -20%;
+  }
+  100% {
+    left: 65%;
+  }
+}
 .fade-in {
   opacity: 0;
   animation-name: fadeIn;
