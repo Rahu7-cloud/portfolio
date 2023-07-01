@@ -3,6 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Playlist Script";
+  src: url("Playlist-script.ttf") format("truetype");
+}
+:root {
+  --index: calc(1vw + 1vh);
+}
+body {
+  background-color: black;
+}
+.main-header {
+  position: relative;
+  overflow: hidden;
+}
+.layers {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.layer {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 2;
+}
 nav {
   display: flex;
   align-items: center;
@@ -11,15 +41,77 @@ nav {
   padding-left: 10%;
   padding-right: 10%;
 }
+.layers_base {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  z-index: 0;
+}
+.layers_giraffe {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+.layers_rhino {
+  transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+}
+.layers_valley1 {
+  right: 30%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.layers_valley2 {
+  left: 28%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.layers_man {
+  /* transform: scale(0.8); */
+  left: 2%;
+  top: 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+}
+.layers_grass {
+  top: 27%;
+  transform: scale(0.8);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.layers_orangegrass {
+  top: 35%;
+  right: 10%;
+  transform: scale(0.6);
+}
+.layers_mist1 {
+  transform: scale(0.4);
+  left: 8vw;
+  top: 10vh;
+}
+.layers_mist2 {
+  transform: scale(0.4);
+  top: 25vh;
+  right: 15vw;
+  opacity: 0.8;
+}
+.layers_leaves {
+  transform: scale(0.3);
+  bottom: 290px;
+}
+.layer_header {
+  position: absolute;
+  z-index: 1;
+  top: 36%;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  will-change: transform;
+}
 .name {
-  color: #93472a;
-  font-size: 28px;
-  font-family: "Josefin Sans", sans-serif;
+  color: #a12b04;
+  font-size: calc(var(--index) * 4.8);
+  font-family: "Playlist Script", cursive;
+  text-shadow: 0 0 15px #e46a3d;
 }
 .name #surname {
   color: #491e0e;
   font-size: 28px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Playlist Script", cursive;
   font-weight: bold;
 }
 nav ul li {
@@ -287,4 +379,9 @@ nav ul li a:hover {
 }
 #linkedin-logo:hover {
   background-color: #0077b5;
+}
+.about-me {
+  background-color: black;
+  color: white;
+  height: 100vh;
 }
