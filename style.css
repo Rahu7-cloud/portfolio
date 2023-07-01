@@ -98,7 +98,7 @@ nav {
 .layer_header {
   position: absolute;
   z-index: 1;
-  top: 36%;
+  top: 29%;
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
   will-change: transform;
 }
@@ -108,6 +108,85 @@ nav {
   font-family: "Playlist Script", cursive;
   text-shadow: 0 0 15px #e46a3d;
 }
+#message {
+  font-family: "Open Sans", sans-serif;
+  color: #a12b04;
+  text-shadow: 0 0 15px #e46a3d;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+#layers_cloud1 {
+  z-index: 2;
+  position: absolute;
+  right: 65%;
+  bottom: 45%;
+  transform: scale(0.5);
+  animation: moveCloud1 100s linear infinite;
+}
+
+@keyframes moveCloud1 {
+  0% {
+    right: 65%;
+  }
+  50% {
+    right: -20%;
+  }
+  100% {
+    right: 65%;
+  }
+}
+
+#layers_cloud2 {
+  z-index: 2;
+  position: absolute;
+  left: 65%;
+  bottom: 50%;
+  transform: scale(0.7);
+  animation: moveCloud2 100s linear infinite;
+}
+
+@keyframes moveCloud2 {
+  0% {
+    left: 65%;
+  }
+  50% {
+    left: -20%;
+  }
+  100% {
+    left: 65%;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.fade-out {
+  opacity: 1;
+  animation-name: fadeOut;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .name #surname {
   color: #491e0e;
   font-size: 28px;
