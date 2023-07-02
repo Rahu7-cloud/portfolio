@@ -13,6 +13,41 @@
 body {
   background-color: black;
 }
+.preloader {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  transition: 1s;
+  font-family: "Poppins", sans-serif;
+}
+.logo-header {
+  position: absolute;
+  top: 48%;
+  right: 38%;
+  transform: translate(-50%, -50%);
+  color: #df9449;
+}
+.alias {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+.alias.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+.alias.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
 .main-header {
   position: relative;
   overflow: hidden;
@@ -44,6 +79,7 @@ nav {
 .layers_base {
   transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
   z-index: 0;
+  filter: saturate(110%);
 }
 .layers_giraffe {
   transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
@@ -120,13 +156,14 @@ nav {
   position: absolute;
   right: 65%;
   bottom: 45%;
+  filter: brightness(1.2);
   transform: scale(0.5);
-  animation: moveCloud1 100s linear infinite;
+  animation: moveCloud1 500s linear infinite;
 }
 
 @keyframes moveCloud1 {
   0% {
-    right: 65%;
+    right: 55%;
   }
   50% {
     right: -20%;
@@ -142,7 +179,7 @@ nav {
   left: 65%;
   bottom: 50%;
   transform: scale(0.7);
-  animation: moveCloud2 100s linear infinite;
+  animation: moveCloud2 500s linear infinite;
 }
 
 @keyframes moveCloud2 {
@@ -159,7 +196,8 @@ nav {
 .fade-in {
   opacity: 0;
   animation-name: fadeIn;
-  animation-duration: 2s;
+  animation-duration: 3s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 .fade-out {
