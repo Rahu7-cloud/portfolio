@@ -24,17 +24,19 @@ window.addEventListener("DOMContentLoaded", () => {
       }, (i + 1) * 400);
     });
 
-    setTimeout(() => {
-      alias.forEach((span, i) => {
-        setTimeout(() => {
-          span.classList.remove("active");
-          span.classList.add("fade");
-        }, (i + 1) * 50);
-      });
-    }, 2000);
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        alias.forEach((span, i) => {
+          setTimeout(() => {
+            span.classList.remove("active");
+            span.classList.add("fade");
+          }, (i + 1) * 50);
+        });
+      }, 3000);
 
-    setTimeout(() => {
-      preloader.style.top = "-100vh";
-    }, 2300);
+      setTimeout(() => {
+        preloader.style.top = "-100vh";
+      }, 3300);
+    });
   });
 });
