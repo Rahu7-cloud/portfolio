@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
     alias.forEach((span, i) => {
       setTimeout(() => {
         span.classList.add("active");
-      }, (i + 1) * 400);
+      }, (i + 1) * 500);
     });
 
     window.addEventListener("load", () => {
