@@ -30,6 +30,15 @@
       type="image/x-icon"
       href="/images/icons8-grand-canyon-16.png"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"
+      defer
+    ></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div class="preloader">
@@ -38,6 +47,60 @@
       </h1>
     </div>
     <header class="main-header">
+      <div class="btn" id="toggle-btn">
+        <div class="btn-outline btn-outline-1"></div>
+        <div class="btn-outline btn-outline-2"></div>
+        <div id="hamburger">
+          <span></span>
+        </div>
+      </div>
+      <div class="overlay">
+        <svg>
+          <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+        </svg>
+      </div>
+      <div class="menu">
+        <div class="primary-menu">
+          <div class="menu-container">
+            <div class="wrapper">
+              <div class="menu-item">
+                <a href="#"><span>I</span>About</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#"><span>II</span>Project</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#"><span>III</span>Skills</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="secondary-menu">
+          <div class="menu-container">
+            <div class="wrapper">
+              <div class="menu-item">
+                <a href="#">Blog</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#">Work Experience</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#">Hobbies</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#">Travelogue</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="layers">
         <!--<nav>
         <h2 class="name">Rahul<span id="surname"> Patnaik</span></h2>
@@ -165,7 +228,7 @@
         ></div>
         <div
           class="layer layers_valley2"
-          style="background-image: url(images/valley2.png)"
+          style="background-image: url(images/opening2.png)"
         ></div>
         <div
           class="layer layers_orangegrass"
@@ -197,7 +260,6 @@
       </div>
     </section>
     <script src="vanilla-tilt.min.js"></script>
-    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script
       type="module"
