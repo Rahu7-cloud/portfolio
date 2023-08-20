@@ -30,15 +30,6 @@
       type="image/x-icon"
       href="/images/icons8-grand-canyon-16.png"
     />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"
-      defer
-    ></script>
-    <script src="app.js" defer></script>
   </head>
   <body>
     <div class="preloader">
@@ -55,7 +46,7 @@
         </div>
       </div>
       <div class="overlay">
-        <svg>
+        <svg viewBox="0 0 1000 1000">
           <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
         </svg>
       </div>
@@ -82,7 +73,7 @@
           <div class="menu-container">
             <div class="wrapper">
               <div class="menu-item">
-                <a href="#">Blog</a>
+                <a href="#">Wattpad</a>
                 <div class="menu-item-revealer"></div>
               </div>
               <div class="menu-item">
@@ -93,6 +84,8 @@
                 <a href="#">Hobbies</a>
                 <div class="menu-item-revealer"></div>
               </div>
+            </div>
+            <div class="wrapper">
               <div class="menu-item">
                 <a href="#">Travelogue</a>
                 <div class="menu-item-revealer"></div>
@@ -259,6 +252,125 @@
         </p>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.js"></script>
+    <script>
+      //hamburger menu animation
+      const tl = gsap.timeline({ paused: true });
+      let path = document.querySelector("path");
+      let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+
+      gsap.set(spanBefore, { background: "#ffe29a" });
+      gsap.set(".menu", { visibility: "hidden" });
+
+      function revealMenu() {
+        revealMenuItems();
+
+        const hamburger = document.getElementById("hamburger");
+        const toggleBtn = document.getElementById("toggle-btn");
+
+        toggleBtn.onclick = function (e) {
+          hamburger.classList.toggle("active");
+          tl.reversed(!tl.reversed());
+        };
+      }
+
+      revealMenu();
+
+      function revealMenuItems() {
+        const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+        const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
+
+        const power2 = "power2.inOut";
+        const power4 = "power4.inOut";
+
+        tl.to("#hamburger", 1.25, {
+          marginTop: "-5px",
+          x: -40,
+          y: 40,
+          ease: power4,
+        });
+
+        tl.to(
+          "#hamburger span",
+          1,
+          {
+            background: "#862b0d",
+            ease: power2,
+          },
+          "<"
+        );
+
+        tl.to(
+          spanBefore,
+          1,
+          {
+            background: "#862b0d",
+            ease: power2,
+          },
+          "<"
+        );
+
+        tl.to(
+          ".btn .btn-outline",
+          1.25,
+          {
+            x: -40,
+            y: 40,
+            width: "140px",
+            height: "140px",
+            border: "1px solid #ffe29a",
+            ease: power4,
+          },
+          "<"
+        );
+
+        tl.to(
+          path,
+          0.8,
+          {
+            attr: {
+              d: start,
+            },
+            ease: Power2.easeIn,
+          },
+          "<"
+        ).to(
+          path,
+          0.8,
+          {
+            attr: {
+              d: end,
+            },
+            ease: Power2.easeOut,
+          },
+          "-=0.5"
+        );
+
+        tl.to(
+          ".menu",
+          1,
+          {
+            visibility: "visible",
+          },
+          "-=0.5"
+        );
+
+        tl.to(
+          ".menu-item > a",
+          1,
+          {
+            top: 0,
+            ease: "power3.out",
+            stagger: {
+              amount: 0.5,
+            },
+          },
+          "-=1"
+        ).reverse();
+      }
+    </script>
+    <script src="app.js" defer></script>
     <script src="vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script

@@ -40,7 +40,7 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 3;
 }
 svg path {
   fill: var(--overlay-bg);
@@ -83,7 +83,7 @@ svg path {
   }
 }
 #hamburger {
-  position: absolute;
+  position: relative;
   width: 20px;
   height: 20px;
   z-index: 4;
@@ -134,7 +134,7 @@ svg path {
   top: 120px;
   line-height: 70%;
   text-decoration: none;
-  color: red;
+  color: var(--link-color);
   font-family: "Roslindale";
 }
 .menu a span {
@@ -152,7 +152,7 @@ svg path {
   left: -20px;
   width: 120%;
   height: 200%;
-  /* background: var(--overlay-bg); */
+  background: var(--overlay-bg);
   margin: 0 auto;
 }
 .menu-container {
@@ -211,7 +211,7 @@ svg path {
   bottom: -20px;
   opacity: 0;
 }
-.alias.active {
+.alias.rise {
   bottom: 0;
   opacity: 1;
   transition: ease-in-out 0.5s;
