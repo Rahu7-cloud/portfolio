@@ -1,7 +1,2 @@
-Thank You for your support!
-
-
-This cool custom font is from Artimasa
---------------------------------------
-
-More similar products here: http://goo.gl/xc5c0g and: http://artimasa.com/
+Hi There!
+This entire portfolio is work in progress, with lot many additions and features to be added soon :) 
