@@ -109,10 +109,10 @@ svg path {
   transform: translateY(-4px);
   transition: transform 0.25s;
 }
-#hamburger .active span {
+#hamburger span .active {
   transform: rotate(45deg);
 }
-#hamburger .active span::before {
+#hamburger span::before .active {
   top: unset;
   width: 24px;
   transform: rotate(-90deg);
@@ -507,7 +507,7 @@ nav ul li a:hover {
 .button-box:hover {
   box-shadow: 0 0 20px 9px #e48b0f;
 }
-.toggle-btn {
+/* .toggle-btn {
   padding: 10px 30px;
   cursor: pointer;
   background: transparent;
@@ -517,7 +517,7 @@ nav ul li a:hover {
   font-family: "Aboreto", cursive;
   font-weight: bold;
   font-size: 1em;
-}
+} */
 #btn {
   top: 0;
   left: 0;
