@@ -22,7 +22,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Open+Sans:wght@500&family=Poppins:wght@300&family=Finger+Paint&family=Caveat:wght@400;500&family=Fira+Sans+Extra+Condensed&family=Oswald:wght@600&family=Josefin+Sans:wght@500;600;700&&family=Miltonian+Tattoo&family=Oswald:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Aboreto&family=Open+Sans:wght@500&family=Poppins:wght@300&family=Finger+Paint&family=Caveat:wght@400;500&family=Fira+Sans+Extra+Condensed&family=Oswald:wght@600&family=Josefin+Sans:wght@500;600;700&&family=Miltonian+Tattoo&family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link
@@ -233,23 +237,52 @@
         ></div>
       </div>
     </header>
-    <section class="about-me">
-      <div>
-        <h2>testing</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas maiores
-          suscipit corrupti qui rerum, enim a velit nulla delectus veritatis
-          quod voluptas porro incidunt blanditiis saepe quam dolores alias quae
-          quaerat temporibus consequuntur. Repellat deserunt ipsam debitis,
-          eveniet perferendis neque perspiciatis consequuntur, harum maiores
-          distinctio quae fugiat magnam, doloribus fugit nobis ad illo rerum
-          praesentium. Eligendi illo dignissimos mollitia amet, harum saepe
-          accusamus aspernatur quibusdam, corporis voluptatum quasi incidunt
-          sequi ipsam? Aliquid, commodi dolore! Eveniet nemo voluptatem rerum
-          iste nostrum omnis ea itaque consequatur doloremque, quo sunt ad
-          soluta? Neque totam nulla ipsum ipsa ratione nisi minus itaque quia
-          doloremque?
-        </p>
+    <section class="about-me section" id="home">
+      <div class="home__container container grid">
+        <h1 class="home__name">Hey! That's me</h1>
+        <div class="home__perfil">
+          <div class="home__image">
+            <img src="images/profile.jpg" alt="" class="home__img" />
+            <div class="home__shadow"></div>
+            <img src="images/curved-arrow.svg" alt="" class="home__arrow" />
+            <img src="images/random-lines.svg" alt="" class="home__line" />
+
+            <div class="geometric-box"></div>
+          </div>
+          <div class="home__social">
+            <a
+              href=""
+              target="https://www.instagram.com/rahul_patnaik_/"
+              class="home__social-link"
+            >
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a
+              href=""
+              target="www.linkedin.com/in/rahul-patnaik7"
+              class="home__social-link"
+            >
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+            <a href="" target="_blank" class="home__social-link">
+              <i class="ri-github-line"></i>
+            </a>
+          </div>
+        </div>
+        <div class="home__info">
+          <p class="home__description">
+            <b>Software Engineer</b> with a passion for learning and a deep
+            fascination for algorithms. Committed to continuous growth, I love
+            crafting efficient and creative solutions that solve complex
+            problems.
+          </p>
+          <a href="#about" class="home__scroll">
+            <div class="home__scroll-box">
+              <img src="images/arrow-down-s-line.png" alt="" />
+            </div>
+            <span class="home__scroll-text">Scroll Down</span>
+          </a>
+        </div>
       </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
