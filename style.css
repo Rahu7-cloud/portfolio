@@ -785,9 +785,17 @@ nav ul li a:hover {
 }
 
 .home__arrow,
-.home__line {
+.home__line,
+.home__leaves {
   position: absolute;
   transition: filter 0.4s;
+}
+
+.home__leaves {
+  width: 161px;
+  top: 0.1rem;
+  left: 16rem;
+  z-index: 5;
 }
 
 .home__arrow {
