@@ -753,7 +753,7 @@ nav ul li a:hover {
   align-self: flex-end;
 }
 
-.home__perfil {
+.home__prefil {
   position: relative;
   justify-self: center;
   grid-column: 2/3;
@@ -786,9 +786,16 @@ nav ul li a:hover {
 
 .home__arrow,
 .home__line,
-.home__leaves {
+.home__leaves,
+.leaves_overlay {
   position: absolute;
   transition: filter 0.4s;
+}
+
+.leaves_overlay {
+  width: 25rem;
+  z-index: 5;
+  top: 13rem;
 }
 
 .home__leaves {
@@ -812,7 +819,7 @@ nav ul li a:hover {
   rotate: 30deg;
 }
 
-.home__perfil .geometric-box {
+.home__prefil .geometric-box {
   top: 15rem;
   left: -0.7rem;
   z-index: 5;
