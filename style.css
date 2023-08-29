@@ -265,6 +265,14 @@ svg path {
 .main-header {
   position: relative;
   overflow: hidden;
+  background: rgb(255, 203, 98);
+  background: radial-gradient(
+    circle,
+    rgba(255, 203, 98, 1) 0%,
+    rgba(255, 203, 98, 1) 46%,
+    rgba(255, 203, 98, 1) 56%,
+    rgba(255, 180, 84, 1) 100%
+  );
 }
 .layers {
   height: 100vh;
@@ -787,7 +795,8 @@ nav ul li a:hover {
 .home__arrow,
 .home__line,
 .home__leaves,
-.leaves_overlay {
+.leaves_overlay,
+.home__birds {
   position: absolute;
   transition: filter 0.4s;
 }
@@ -810,6 +819,14 @@ nav ul li a:hover {
   left: -8rem;
   rotate: 80deg;
   width: 80px;
+}
+
+.home__birds {
+  width: 161px;
+  top: -3rem;
+  left: -4rem;
+  z-index: 5;
+  filter: sepia(30%) hue-rotate(10deg);
 }
 
 .home__line {
@@ -850,6 +867,7 @@ nav ul li a:hover {
 .home__social-link:hover {
   background-color: var(--overlay-bg);
   color: var(--link-color);
+  transform: scale(1.2) translateZ(50px);
 }
 
 .home__info {
