@@ -44,7 +44,8 @@ a {
 }
 ::-webkit-scrollbar-thumb:hover {
   border-radius: 0.5em;
-  background-color: hsla(37, 100%, 81%, 0.812);
+  /* background-color: hsla(37, 100%, 81%, 0.812); */
+  background: url(images/tribal.jpg);
 }
 
 /* styling color codes */
