@@ -10,11 +10,17 @@
   <body>
     <div class="preloader">
       <img src="images/hogwarts.png" class="hogwarts" alt="" />
+      <img src="images/owlpost.png" alt="" id="owlpost" />
       <div class="address">
-        <input type="text" placeholder="Enter Your Name" id="name_input" />
+        <input
+          type="text"
+          placeholder="Enter Your Name"
+          id="name_input"
+          onblur="getName()"
+        />
         <div class="address_line1">The Attic of forgotten spells</div>
         <div class="address_line2">5, MG Road</div>
-        <div class="address_line3">Little Enchanted Camp</div>
+        <div class="address_line3">Charmed Quarters, Wizarding World</div>
         <div class="address_line1">Indian Wizarding Territories</div>
       </div>
     </div>
