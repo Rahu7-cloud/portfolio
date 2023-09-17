@@ -10,78 +10,94 @@
   <body>
     <div class="preloader">
       <img src="images/hogwarts.png" class="hogwarts" alt="" />
+      <img src="images/owlpost.png" alt="" id="owlpost" />
       <div class="address">
-        <input type="text" placeholder="Enter Your Name" id="name_input" />
+        <input
+          type="text"
+          placeholder="Enter Your Name"
+          id="name_input"
+          onblur="getName()"
+        />
         <div class="address_line1">The Attic of forgotten spells</div>
         <div class="address_line2">5, MG Road</div>
-        <div class="address_line3">Little Enchanted Camp</div>
+        <div class="address_line3">Charmed Quarters, Wizarding World</div>
         <div class="address_line1">Indian Wizarding Territories</div>
       </div>
+      <input type="image" src="images/momlogo.png" id="momlogo" />
+      <!-- <img src="images/momlogo.png" id="momlogo" alt="" /> -->
     </div>
-    <div class="btn" id="toggle-btn">
-      <div class="btn-outline btn-outline-1"></div>
-      <div class="btn-outline btn-outline-2"></div>
-      <div id="hamburger">
-        <span></span>
+    <div class="lander">
+      <div class="btn" id="toggle-btn">
+        <div class="btn-outline btn-outline-1"></div>
+        <div class="btn-outline btn-outline-2"></div>
+        <div id="hamburger">
+          <span></span>
+        </div>
       </div>
-    </div>
-    <div class="overlay">
-      <svg viewBox="0 0 1000 1000">
-        <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
-      </svg>
-    </div>
-    <div class="menu">
-      <div class="primary-menu">
-        <div class="menu-container">
-          <div class="wrapper">
-            <div class="menu-item">
-              <a href="index.html"><span>I</span>Portfolio</a>
-              <div class="menu-item-revealer"></div>
+      <div class="overlay">
+        <svg viewBox="0 0 1000 1000">
+          <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+        </svg>
+      </div>
+      <div class="menu">
+        <div class="primary-menu">
+          <div class="menu-container">
+            <div class="wrapper">
+              <div class="menu-item">
+                <a href="index.html"><span>I</span>Portfolio</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#"><span>II</span>Project</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#"><span>III</span>Skills</a>
+                <div class="menu-item-revealer"></div>
+              </div>
             </div>
-            <div class="menu-item">
-              <a href="#"><span>II</span>Project</a>
-              <div class="menu-item-revealer"></div>
+          </div>
+        </div>
+        <div class="secondary-menu">
+          <div class="menu-container">
+            <div class="wrapper">
+              <div class="menu-item">
+                <a href="#">Wattpad</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#">Work Experience</a>
+                <div class="menu-item-revealer"></div>
+              </div>
+              <div class="menu-item">
+                <a href="#">Hobbies</a>
+                <div class="menu-item-revealer"></div>
+              </div>
             </div>
-            <div class="menu-item">
-              <a href="#"><span>III</span>Skills</a>
-              <div class="menu-item-revealer"></div>
+            <div class="wrapper">
+              <div class="menu-item">
+                <a href="#">Travelogue</a>
+                <div class="menu-item-revealer"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="secondary-menu">
-        <div class="menu-container">
-          <div class="wrapper">
-            <div class="menu-item">
-              <a href="#">Wattpad</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-            <div class="menu-item">
-              <a href="#">Work Experience</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-            <div class="menu-item">
-              <a href="#">Hobbies</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-          </div>
-          <div class="wrapper">
-            <div class="menu-item">
-              <a href="#">Travelogue</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-          </div>
+      <div class="main">
+        <div class="dailyprophet">
+          <img src="images/dailyprophet.png" alt="" />
+        </div>
+        <div class="text-container">
+          <div class="text">DiscBreakers</div>
         </div>
       </div>
     </div>
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-    <div class="text-container">
-      <div class="text">DiscBreakers</div>
-    </div>
-    <div class="earth"><img src="images/earth6.png" alt="" /></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="scripttrial.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.js"></script>
     <script>
@@ -90,7 +106,7 @@
       let path = document.querySelector("path");
       let spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
 
-      gsap.set(spanBefore, { background: "#e0be97" });
+      gsap.set(spanBefore, { background: "#000" });
       gsap.set(".menu", { visibility: "hidden" });
 
       function revealMenu() {
@@ -125,7 +141,7 @@
           "#hamburger span",
           1,
           {
-            background: "#01173F",
+            background: "#dac9b0",
             ease: power2,
           },
           "<"
@@ -135,7 +151,7 @@
           spanBefore,
           1,
           {
-            background: "#01173F",
+            background: "#dac9b0",
             ease: power2,
           },
           "<"
@@ -149,7 +165,7 @@
             y: 40,
             width: "120px",
             height: "110px",
-            border: "1px solid #01173F",
+            border: "1px solid #dac9b0",
             ease: power4,
           },
           "<"
