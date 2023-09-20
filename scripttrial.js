@@ -12,19 +12,21 @@ function getName() {
   console.log(name);
 }
 
-// const tl2 = gsap.timeline({ paused: true });
-const tl2 = gsap.timeline();
+//animation for the lander page with rotating like a newspaper
+const tl2 = gsap.timeline({ paused: true });
 
 tl2.to(".lander", {
   y: "100vh",
   scale: 0.6,
   duration: 0,
+  zIndex: 4,
 });
 
 tl2.to(".lander", {
   y: "30vh",
   duration: 1,
   delay: 1,
+  zIndex: 4,
 });
 
 tl2.to(".lander", {
@@ -32,12 +34,13 @@ tl2.to(".lander", {
   rotate: 360,
   scale: 1,
   duration: 0.8,
+  zIndex: 4,
 });
 
 const startButton = document.getElementById("momlogo");
 startButton.addEventListener("click", () => {
+  tl2.play();
   tl2.to(".preloader", {
     display: "none",
   });
-  tl2.play();
 });
