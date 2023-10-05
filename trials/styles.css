@@ -1,36 +1,17 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
+/* styles.css */
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.ripple-button {
-  position: relative;
-  padding: 16px 32px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 4px;
-  overflow: hidden;
+.left-image {
+  float: left;
+  margin-right: 20px;
+  width: 20%;
 }
 
-.ripple {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-  transform: scale(0);
-  animation: ripple-animation 0.5s linear;
-}
-
-@keyframes ripple-animation {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
+.right-image {
+  float: right;
+  margin-left: 20px;
+  width: 20%;
 }
