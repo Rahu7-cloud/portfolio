@@ -266,7 +266,6 @@ svg path {
 .main-header {
   position: relative;
   overflow: hidden;
-  background: rgb(255, 203, 98);
   background: radial-gradient(
     circle,
     rgba(255, 203, 98, 1) 0%,
